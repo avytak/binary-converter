@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "y",
+    "public": "dist/binary-converter",
     "ignore": [
       "firebase.json",
       "**/.*",
