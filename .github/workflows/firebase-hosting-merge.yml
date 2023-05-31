@@ -7,8 +7,6 @@ name: Deploy to Firebase Hosting on merge
     branches:
       - main
 jobs:
-  -name: npm install
-  -uses: npm install
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
