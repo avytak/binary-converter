@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "firebase/app";
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -114,4 +117,6 @@ export class AppComponent {
     return numberRegex.test(input);
   }
 
+
+  app = initializeApp(environment.firebaseConfig);
 }
