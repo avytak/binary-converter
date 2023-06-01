@@ -16,12 +16,6 @@ export class AppComponent {
   hexValue = '';
 
   convert(inputValue: string) {
-
-    if (!this.isNumeric(inputValue)) {
-      alert('Введіть валідне число!');
-      return;
-    }
-
     const numberToConvert = Number(inputValue);
     this.binaryValue = this.convertToBinaryWithFraction(numberToConvert);
     this.octalValue = this.convertToOctalWithFraction(numberToConvert);
@@ -111,12 +105,5 @@ export class AppComponent {
 
     return hexOutput.toUpperCase();
   }
-
-  isNumeric(input: string): boolean {
-    const numberRegex = /^-?\d+\.?\d*$/;
-    return numberRegex.test(input);
-  }
-
-
   app = initializeApp(environment.firebaseConfig);
 }
